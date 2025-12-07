@@ -12,4 +12,9 @@ class Book:
         print(f"Deleting {self.title}")
     
     def __str__(self):
-        """Return a user
+        """Return a user-friendly string representation of the book."""
+        return f"{self.title} by {self.author}, published in {self.year}"
+    
+    def __repr__(self):
+        """Return an official string representation that can recreate the object."""
+        return f"Book('{self.title}', '{self.author}', {self.year})"
